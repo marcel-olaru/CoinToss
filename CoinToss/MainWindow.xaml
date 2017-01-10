@@ -1,0 +1,19 @@
+﻿<Window x:Class="CoinToss.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoinToss"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="369.231">
+    <Grid>
+        <Button x:Name="insertText" Content="Spin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="54,228,0,0" FontWeight="Bold" Click="spin_Click"/>
+        <TextBox x:Name="displayText" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" Margin="27,171,0,0" TextChanged="textBox_TextChanged"/>
+        <RichTextBox x:Name="displayMembers" HorizontalAlignment="Center" Height="279" VerticalAlignment="Top" Width="164" Margin="175,10,0,0" IsEnabled="False">
+            <FlowDocument/>
+        </RichTextBox>
+        <Button x:Name="Reset" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="54,274,0,0" Click="Reset_Click"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="119" VerticalAlignment="Top" Width="153" Margin="10,21,0,0"/>
+
+    </Grid>
+</Window>
