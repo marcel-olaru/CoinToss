@@ -5,15 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoinToss"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="369.231">
+        Title="Coin Toss" Height="350" Width="369.231" SizeToContent="Width" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="insertText" Content="Spin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="54,228,0,0" FontWeight="Bold" Click="spin_Click"/>
-        <TextBox x:Name="displayText" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" Margin="27,171,0,0" TextChanged="textBox_TextChanged"/>
-        <RichTextBox x:Name="displayMembers" HorizontalAlignment="Center" Height="279" VerticalAlignment="Top" Width="164" Margin="175,10,0,0" IsEnabled="False">
+        <Button x:Name="insertText" Content="Spin the coin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="121" Margin="31,223,0,0" FontWeight="Bold" Click="spin_Click" FontSize="16">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF06161"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="displayText" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" Margin="31,189,0,0" TextChanged="textBox_TextChanged" IsEnabled="False"/>
+        <RichTextBox x:Name="displayMembers" HorizontalAlignment="Center" Height="299" VerticalAlignment="Top" Width="164" Margin="186,10,11,0" IsEnabled="False" HorizontalContentAlignment="Stretch" FontSize="10">
             <FlowDocument/>
         </RichTextBox>
-        <Button x:Name="Reset" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="54,274,0,0" Click="Reset_Click"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="119" VerticalAlignment="Top" Width="153" Margin="10,21,0,0"/>
+        <Button x:Name="Reset" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="52,264,0,0" Click="Reset_Click"/>
+        <Label x:Name="lable1" Content="Heads" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,98,0,0" Width="67" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lable2" Content="Tails" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="91,98,0,0" Width="61" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="headstext" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Margin="7,124,0,0" IsEnabled="False"/>
+        <TextBox x:Name="tailstext" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" Margin="91,124,0,0" IsEnabled="False"/>
+        <Label x:Name="total" Content="Total Spins " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="52,20,0,0"/>
+        <TextBox x:Name="totalSpins_" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="32,51,0,0" IsEnabled="False"/>
 
     </Grid>
 </Window>
